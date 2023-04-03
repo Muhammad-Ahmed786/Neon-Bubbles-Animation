@@ -44,8 +44,8 @@ function Circle(x, y, dx, dy, radius) {
         c.beginPath()
         c.arc(this.x, this.y, this.radius, Math.PI * 2, false)
         c.lineWidth = 8;
-        c.shadowColor = 'blue';
-        c.shadowBlur = 80;
+        c.shadowColor = '#39ff14';
+        c.shadowBlur = 15;
         c.shadowOffsetX = 0;
         c.shadowOffsetY = 0;
         c.stroke();

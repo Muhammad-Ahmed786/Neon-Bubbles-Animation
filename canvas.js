@@ -43,11 +43,13 @@ function Circle(x, y, dx, dy, radius) {
     this.draw = function () {
         c.beginPath()
         c.arc(this.x, this.y, this.radius, Math.PI * 2, false)
-        c.lineWidth = "3"
-        c.shadowColor = "blue"
-        c.shadowBlur = 10
-        c.strokeStyle = "blue"
-        c.stroke()
+        c.lineWidth = 8;
+        c.shadowColor = 'blue';
+        c.shadowBlur = 80;
+        c.shadowOffsetX = 0;
+        c.shadowOffsetY = 0;
+        c.stroke();
+        c.strokeStyle = "white"
     }
     this.update = function () {
         if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
@@ -66,12 +68,12 @@ function Circle(x, y, dx, dy, radius) {
 
 var circleArray = []
 
-for (var i = 0; i < 60; i++) {
+for (var i = 0; i < 20; i++) {
     var radius = 30
     var x = Math.random() * (innerWidth - radius * 2) + radius
     var y = Math.random() * (innerHeight - radius * 2) + radius
-    var dx = (Math.random() - 0.5) *3
-    var dy = (Math.random() - 0.5) *3
+    var dx = (Math.random() - 0.5) * 6
+    var dy = (Math.random() - 0.5) * 6
     circleArray.push(new Circle(x, y, dx, dy, radius))
 }
 
